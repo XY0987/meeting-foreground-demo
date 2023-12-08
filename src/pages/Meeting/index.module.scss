@@ -1,0 +1,49 @@
+.container {
+  padding: 20px;
+  .localdemo01 {
+    width: 300px;
+    height: 200px;
+    position: fixed;
+    bottom: 24px;
+    right: 4px;
+  }
+
+  .frame-videos {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    padding: 30px;
+  }
+  .frame-videos div {
+    border: 1px blueviolet solid;
+    width: 23%;
+    height: 200px;
+    position: relative;
+    background-color: black;
+  }
+  .frame-videos div label {
+    color: white;
+    position: absolute;
+    bottom: 2px;
+    left: 2px;
+    z-index: 9999;
+  }
+  .dialog-inner-container {
+    margin-left: 35%;
+    margin-top: 5%;
+  }
+
+  .options {
+    button {
+      margin-left: 10px;
+    }
+  }
+}
+
+.allVideo {
+  video {
+    width: 300px !important;
+    height: 200px !important;
+  }
+}
