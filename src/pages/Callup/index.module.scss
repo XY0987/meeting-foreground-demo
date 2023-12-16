@@ -1,0 +1,11 @@
+.userContainer {
+  .userItem {
+    display: flex;
+    align-items: center;
+    .userImg {
+      width: 150px;
+      height: 150px;
+      border-radius: 50%;
+    }
+  }
+}

@@ -4,11 +4,16 @@ import Login from "../pages/noAuth/login";
 import ForgetPassword from "../pages/noAuth/forgetPassword";
 import Register from "../pages/noAuth/register";
 import Meeting from "../pages/Meeting";
+import Call from "../pages/Callup";
 
 const defaultRoutes: RouteObject[] = [
   {
     path: "/",
     element: <NotAuth title="音视频直播会议" Element={Meeting}></NotAuth>,
+  },
+  {
+    path: "/call",
+    element: <NotAuth title="点对点音视频通话" Element={Call}></NotAuth>,
   },
   {
     path: "/login",
