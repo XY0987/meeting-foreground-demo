@@ -1,4 +1,4 @@
-import { useEffect, useRef, useState } from "react";
+import { useRef, useState } from "react";
 import { Button, Drawer } from "antd";
 
 import style from "./index.module.scss";
@@ -6,19 +6,6 @@ import style from "./index.module.scss";
 import { useModal } from "../../hooks/useModal";
 import Callup from "../../utils/callupOne";
 import { joinConfig } from "./options";
-
-export const getParams = (queryName: string) => {
-  let url = window.location.href;
-  let query = decodeURI(url.split("?")[1]);
-  let vars = query.split("&");
-  for (var i = 0; i < vars.length; i++) {
-    var pair = vars[i].split("=");
-    if (pair[0] === queryName) {
-      return pair[1];
-    }
-  }
-  return null;
-};
 
 export default function Call() {
   const [open, setOpen] = useState<boolean>(false);
@@ -46,7 +33,6 @@ export default function Call() {
   const joinIn = () => {
     callInit()
       .then((res: any) => {
-        console.log(res);
         const userId = res.userId;
         const roomId = res.roomId;
         const nick = res.nickname;
@@ -74,9 +60,6 @@ export default function Call() {
   const cancel = () => {
     Callup.onCancle();
   };
-  useEffect(() => {
-    // 去获取全部用户的头像信息
-  }, [userList]);
 
   return (
     <div style={{ padding: 20 }}>
